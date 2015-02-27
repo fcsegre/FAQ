@@ -8,7 +8,7 @@ class ComentarioInLine(admin.TabularInline):
 
 class RespostaInLine(admin.TabularInline):
 	model = Resposta
-	extra = 0
+	extra = 1
 	
 	#inlines = [ComentarioInLine]	
 
@@ -17,7 +17,7 @@ class PerguntaAdmin(admin.ModelAdmin):
 	(None, {'fields': ['pergunta', 'pergunta_data', 'usuario']}), 
 	]
 	inlines = [RespostaInLine, ComentarioInLine]
-	search_fields = ['pergunta']
+	search_fields = ['pergunta','resposta__replica']
 	#inlines = [ComentarioInLine]
 
 	
