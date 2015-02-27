@@ -1,2 +1,8 @@
 *.py~
-*.pyc 
+*.sqlite
+*.sqlite3
+*.db
+*.py[co]
+*.swp
+*.egg
+
